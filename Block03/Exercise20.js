@@ -16,9 +16,10 @@ var arr = [
         
 ]
 var sumYens = 0;
+var rate = 0.0089;
 
 for (var element of arr) {
         sumYens += parseInt(element)
 }
 average = Math.round(sumYens / arr.length)
-console.log(`you spent an average of ${average} per day in you trip to Japan`)
+console.log(`you spent an average of ${Math.round(average * rate)} per day in you trip to Japan`)
