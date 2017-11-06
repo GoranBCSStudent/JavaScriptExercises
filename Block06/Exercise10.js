@@ -1,6 +1,5 @@
 function model(opType, obj) {
-	if (opType == 'add') {
-		DB = []
+	if (opType == 'add') {		
 		var newObj = {}
 		for (var key in obj) {
 			value = obj[key]
