@@ -27,4 +27,4 @@ function sort(objIn) {
 	return newObj
 }
 obj = {a: 1, b: 20, c: 3, d: 4, e: 1, f: 4}
-console.log(sort(obj))
+console.log(sort(obj)) 

@@ -29,4 +29,4 @@ DB = []
 model("add", {id: 1, name: "pedro", age: "32", address: "Muntaner 262, Barcelona, Spain"})
 model("add", {name: 43, married: "asdfasdf"})
 model("add", {name: "43", married: true, age: 20})
-console.log(DB)
+console.log(DB) 

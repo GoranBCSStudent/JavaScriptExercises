@@ -18,4 +18,4 @@ DB = []
 model("add", {id: 1, name: "Joe", age: "32", address: "Muntaner 262, Barcelona", married: "to Mary"})
 console.log(DB)
 
-// age is of type string so it was also not added
+// age is of type string so it was also not added 

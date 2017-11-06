@@ -50,4 +50,4 @@ console.log(sort(obj,'values','ascending'))
 //Object {0: 1, 1: 1, 2: 3, 3: 4, 4: 4, 5: 20}
 console.log(sort(obj,'values','descending'))
 //Object {0: 20, 1: 4, 2: 4, 3: 3, 4: 1, 5: 1}
-console.log(sort(obj,'values'))
+console.log(sort(obj,'values')) 

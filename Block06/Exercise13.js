@@ -30,4 +30,4 @@ console.log(newObje)
 
 var newObje = splice(obj, 0, 0)
 console.log(newObje)
-// newObje => {}
+// newObje => {} 
