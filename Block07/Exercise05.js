@@ -39,4 +39,4 @@ universe.energy.total()
 
 universe.energy.destroy(-5)
 universe.matter.total() 
-universe.energy.total()
+universe.energy.total() 

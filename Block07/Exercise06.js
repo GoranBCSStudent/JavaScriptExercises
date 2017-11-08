@@ -44,4 +44,4 @@ Universe.total("matter")
 Universe.total("energy")
 
 Universe.destroy("matter", 5)
-Universe.total("energy")
+Universe.total("energy") 
