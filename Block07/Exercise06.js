@@ -1,5 +1,9 @@
 var protoUniverse = function(unitsEnergy) 
 {	
+	if(!unitsEnergy) {
+		unitsEnergy = 0
+	}
+
 	ref = this // I couldn't figure it out so I have found solution in Ting's snippet
 	this.matter = {
 		units: 0,
@@ -44,4 +48,4 @@ Universe.total("matter")
 Universe.total("energy")
 
 Universe.destroy("matter", 5)
-Universe.total("energy") 
+Universe.total("energy")

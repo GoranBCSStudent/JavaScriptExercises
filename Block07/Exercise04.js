@@ -1,4 +1,8 @@
 var bankAccount = function(amount) {
+	if(!amount) {
+		amount = 0
+	}
+
 	this.balanceValue = amount
 
 	this.withdraw = amount => {

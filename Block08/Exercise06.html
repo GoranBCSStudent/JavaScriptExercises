@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Simple calculator</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+</head>
+<style type="text/css">
+.calc {
+	max-width: 300px;		
+	background-color: whitesmoke;	
+	font-size: x-large;
+	font-weight: bold;
+}
+.key {	
+	cursor: pointer;
+	text-align: center;
+	border: 1px solid gainsboro;
+}
+#result {
+	border: 1px solid gainsboro;
+}
+</style>
+<body>
+	<div class="container calc">
+		<div class="row">
+			<div class="col-12" id="result">0</div>			
+		</div>
+		<div class="row">
+			<div class="col-4 key">0</div>
+			<div class="col-4 key">1</div>
+			<div class="col-4 key">2</div>
+		</div>
+		<div class="row">
+			<div class="col-4 key">3</div>
+			<div class="col-4 key">4</div>
+			<div class="col-4 key">5</div>
+		</div>
+		<div class="row">
+			<div class="col-4 key">6</div>
+			<div class="col-4 key">7</div>
+			<div class="col-4 key">8</div>
+		</div>
+		<div class="row">
+			<div class="col-4 key">9</div>
+			<div class="col-4 key" >+</div>
+			<div class="col-4 key">-</div>
+		</div>
+		<div class="row">
+			<div class="col-4 key">*</div>
+			<div class="col-4 key">/</div>
+			<div class="col-4 key">=</div>
+		</div>
+		<div class="row">
+			<div class="col-12 key">C</div>			
+		</div>
+	</div>
+	<script type="text/javascript">
+		var ele = document.getElementsByClassName("key");
+		for (var i = 0; i < ele.length; i++) {
+		    ele[i].onclick = function() {
+		    	pressedKey = this.innerHTML
+		    	if (pressedKey == "C"){
+		    		document.getElementById('result').innerHTML = "0"
+		    		return
+		    	}
+		    	
+				var resultLine = document.getElementById('result').innerHTML
+				if (resultLine == "0") {
+					resultLine = ""
+				}
+		    	if (pressedKey == "=") {
+		    		document.getElementById('result').innerHTML = eval(resultLine)
+		    	} else {
+		    		var lastLetter = resultLine[resultLine.length - 1]
+		    		if ('+-*/='.includes(lastLetter) && '+-*/='.includes(pressedKey)) {
+		    			document.getElementById('result').innerHTML = resultLine.slice(0,resultLine.length - 1) + pressedKey
+		    		} else {
+		    			document.getElementById('result').innerHTML = resultLine + pressedKey
+		    		}
+		    	}		    	
+		    }
+		}
+	</script>
+</body>
+</html>
