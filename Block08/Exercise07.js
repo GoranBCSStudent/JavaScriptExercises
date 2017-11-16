@@ -12,7 +12,7 @@ var Server = function() {
 			console.log(`${amount} euros added to account nr ${accNo}`)
 		},
 		balance : function(accNo) {
-			if (!refMain.accounts[accNo - 1]) {
+			if (refMain.accounts[accNo - 1]) {
 				console.log(`The balance of account nr ${accNo} is ${refMain.accounts[accNo - 1]} euros`)	
 			} else {
 				console.log(`Account not found`)	
